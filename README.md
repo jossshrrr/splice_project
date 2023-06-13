@@ -2,9 +2,9 @@
 
 Welcome to the Splice_Project repository! This project contains the code developed for my Master's thesis. The primary aim of this project is to apply variant splice prediction tools to genetic variants.
 
-**Please note that the code is currently in development and is not yet workable on another user's system due to dependencies and other issues. We are actively working to address these issues and make the code usable for others.**
+**Please note that the code is currently in development and is not yet workable on another user's system. At present, the code relies on locally installed software, but we are in the process of containerizing it.**
 
-This repository is primarily set up for my supervisors to inspect the overall structure of the code.
+This repository is primarily set up for my supervisors to inspect the overall structure of the pipeline.
 
 ## Table of Contents
 
