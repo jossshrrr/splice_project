@@ -2,7 +2,7 @@ library("VariantAnnotation")
 library("stringr")
 library("dplyr")
 
-###### Filter variants #######
+##### Filter variants ######
 
   args = commandArgs(trailingOnly = TRUE)
   vcf_file = args[1]
