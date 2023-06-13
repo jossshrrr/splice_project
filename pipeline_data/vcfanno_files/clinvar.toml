@@ -1,0 +1,5 @@
+[[annotation]]
+file = "/path/to/clinvar.vcf.gz"
+fields = ["CLNSIG", "CLNSIGCONF"]
+names = ["ClinVarSIG", "ClinVarSIGCONF"]
+ops=["self", "self"]

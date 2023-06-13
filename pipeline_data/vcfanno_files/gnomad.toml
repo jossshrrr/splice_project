@@ -1,0 +1,5 @@
+[[annotation]]
+file = "/path/to/gnomad.genomes.r3.0.sites.vcf.bgz"
+fields = ["AC", "AN", "AF", "nhomalt"]
+names = ["AC_gnomad3.0", "AN_gnomad3.0", "AF_gnomad3.0", "Homozygous_gnomad3.0"]
+ops=["self", "self", "self", "self"]
