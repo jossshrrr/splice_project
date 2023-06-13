@@ -76,6 +76,17 @@ The pipeline utilizes the tool [*vcfanno*](https://github.com/brentp/vcfanno) to
 | `gnomad_toml`  | Path to the *vcfanno* configuration file for gnomAD.| `'/pipeline_data/gnomad.toml'` |
 | `clinvar_toml` | Path to the *vcfanno* configuration file for ClinVar.| `'/pipeline_data/clinvar.toml'`|
 
+
+The pipeline also uses *vcfanno* to process splice prediction scores. This requires the additional configuration files written in both TOML and Lua scripting language below:
+
+| Tool      | Lua File             | TOML File                   |
+|-----------|----------------------|-----------------------------|
+| Pangolin  | `pangolin.lua`       | `pangolin_postprocess.toml` |
+| SpliceAI  | `spliceai.lua`       | `spliceai_postprocess.toml` |
+| SQUIRLS   | `squirls.lua`        | `squirls_postprocess.toml`  |
+
+Please note *CADD* is already provided as a single PHRED score during annotation, so no additional postprocessing is required for this score. 
+
 ## Acknowledgments
 
 I would like to express my gratitude to my supervisors for their support throughout the development of this project.
