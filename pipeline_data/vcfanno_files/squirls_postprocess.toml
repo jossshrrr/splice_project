@@ -1,0 +1,6 @@
+#Squirls_Processed
+[[postannotation]]
+fields = ["SQUIRLS_TXS"]
+op = "lua:squirls(SQUIRLS_TXS)"
+type = "Float"
+name = "SQUIRLS_Max"

@@ -1,0 +1,55 @@
+#Pangolin Processing
+[[postannotation]]
+fields = ["Pangolin"]
+op = "lua:pangolin(Pangolin)"
+type = "String"
+name = "Pangolin_Processed"
+
+#Pangolin_Gene
+[[postannotation]]
+fields = ["Pangolin_Processed"]
+op = "lua:split(Pangolin_Processed,'|')[1]"
+type = "String"
+name = "Pangolin_Gene"
+
+#Pangolin_Increase
+[[postannotation]]
+fields = ["Pangolin_Processed"]
+op = "lua:split(Pangolin_Processed,'|')[2]"
+type = "String"
+name = "Pangolin_Increase"
+
+#Pangolin_Decrease
+[[postannotation]]
+fields = ["Pangolin_Processed"]
+op = "lua:split(Pangolin_Processed,'|')[3]"
+type = "String"
+name = "Pangolin_Decrease"
+
+#Pangolin_Increase_Score
+[[postannotation]]
+fields = ["Pangolin_Increase"]
+op = "lua:split(Pangolin_Increase,':')[2]"
+type = "Float"
+name = "Pangolin_Increase_Score"
+
+#Pangolin_Decrease_Score
+[[postannotation]]
+fields = ["Pangolin_Decrease"]
+op = "lua:split(Pangolin_Decrease,':')[2]"
+type = "Float"
+name = "Pangolin_Decrease_Score"
+
+#Pangolin_Decrease_Abs_Score
+[[postannotation]]
+fields = ["Pangolin_Decrease_Score"]
+op = "lua:abs(Pangolin_Decrease_Score)"
+type = "Float"
+name = "Pangolin_Decrease_Abs_Score"
+
+#Pangolin_Max
+[[postannotation]]
+fields = ["Pangolin_Increase_Score", "Pangolin_Decrease_Abs_Score"]
+op = "max"
+type = "Float"
+name = "Pangolin_Max"
