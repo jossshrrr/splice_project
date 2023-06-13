@@ -69,12 +69,12 @@ Please ensure that these files are in the correct locations specified above as t
 
 ## vcfanno Annotation
 
-The pipeline utilizes the tool [*vcfanno*](https://github.com/brentp/vcfanno) to annotate variants with information from additional sources. *vcfanno* requires configuration files written in TOML.
+The pipeline utilizes the tool [*vcfanno*](https://github.com/brentp/vcfanno) to annotate variants with information from additional sources. *vcfanno* requires configuration files. All files below are in the directory `'/pipeline_data/vcfanno/'`:
 
 | Parameter      | Description                                         | Example Value                  |
 |----------------|-----------------------------------------------------|--------------------------------|
-| `gnomad_toml`  | Path to the *vcfanno* configuration file for gnomAD.| `'/pipeline_data/gnomad.toml'` |
-| `clinvar_toml` | Path to the *vcfanno* configuration file for ClinVar.| `'/pipeline_data/clinvar.toml'`|
+| `gnomAD`  | Path to the *vcfanno* configuration file for gnomAD.| `gnomad.toml` |
+| `ClinV` | Path to the *vcfanno* configuration file for ClinVar.| `clinvar.toml`|
 
 
 The pipeline also uses *vcfanno* to process splice prediction scores. This requires the additional configuration files written in both TOML and Lua scripting language below:
