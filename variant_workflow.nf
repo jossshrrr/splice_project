@@ -5,15 +5,9 @@ nextflow.enable.dsl=2
 params.id = 'NA'
 params.input_vcf = 'NA'
 params.reference_fasta = 'NA'
-
 params.filter = false
 params.gene_bed = 'NA' 
-
-params.gnomad_toml = 'NA'
 params.gnomad_count = 100
-
-params.clinvar_toml = 'NA'
-
 params.spliceai_distance = 50
 params.pangolin_distance = 50
 
@@ -46,13 +40,7 @@ subdir.mkdirs()
 prefix = (params.id)
 bed = (params.gene_bed)
 fasta = (params.reference_fasta)
-
-gnomad_toml = (params.gnomad_toml)
 gnomad_count = (params.gnomad_count)
-
-clinvar_toml = (params.clinvar_toml)
-vep_cache = (params.vep_cache)
-
 spliceai_distance = (params.spliceai_distance)
 pangolin_distance = (params.pangolin_distance)
 
