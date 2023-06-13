@@ -1,6 +1,6 @@
 # Splice_Project
 
-Welcome to the Splice_Project repository! This project contains the code developed for my Master's thesis. The primary aim of this project is to apply variant splice prediction tools to genetic variants.
+This project contains the code developed for my Bioinformatics Master's project. The primary aim of this project is to apply variant splice prediction tools to genetic variants.
 
 **Please note that the code is currently in development and is not yet workable on another user's system. At present, the code relies on locally installed software, but we are in the process of containerizing it.**
 
