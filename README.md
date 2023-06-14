@@ -87,6 +87,21 @@ The pipeline also uses *vcfanno* to process splice prediction scores. This requi
 
 Please note *CADD* is already provided as a single PHRED score during annotation, so no additional postprocessing is required for this score. 
 
+# Model Training Information
+
+Information regarding model training can be found in the [`/model_info`](./model_info) directory.
+
+## Models
+
+The models are loaded as RDS files. This makes it easy to load the trained models in R for later use.
+
+| Name                | File             |
+|---------------------|------------------|
+| Regression Model    | [reg_model.RDS](./model_info/reg_model.RDS) |
+| Random Forest Model | [rf_model.RDS](./model_info/rf_model.RDS)   |
+| Decision Tree Model | [tree_model.RDS](./model_info/tree_model.RDS) |
+
+
 ## Acknowledgments
 
 I would like to express my gratitude to my supervisors for their support throughout the development of this project.
