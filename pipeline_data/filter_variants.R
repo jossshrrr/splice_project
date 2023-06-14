@@ -2,6 +2,7 @@ library("VariantAnnotation")
 library("stringr")
 library("dplyr")
 library("tidyr")
+library("randomForest")
 
 ##### Filter variants ######
 
@@ -189,3 +190,8 @@ rf_model <- readRDS("INSERT_LINK")
 #Random Forest
 rf_vcf_info_final <- vcf_info_final[, c('Pangolin_Max', 'SpliceAI_Max', 'SQUIRLS_Max','CADD_Score', 'Variant_Type')] 
 vcf_info_final$Random_Forest_Pred <- predict(rf_model, rf_vcf_info_final, type = 'class')
+
+table(vcf_info_final$Decision_Tree_Pred)
+table(vcf_info_final$Four_Tools)
+
+saveRDS(vcf_info_final, file = "vcf_info_final.RDS")
