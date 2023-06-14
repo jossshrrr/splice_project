@@ -357,12 +357,14 @@ process Filter_Variants {
     label 'C1M1T1'
 
     module 'R/4.2.0'
+    
+    publishDir "$subdir", mode: "copy"
 
     input:
         path(vcf) 
 
     output:
-        path("*.csv")
+        path("vcf_info_final.RDS")
 
     shell:
     '''
