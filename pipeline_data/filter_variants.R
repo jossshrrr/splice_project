@@ -1,6 +1,7 @@
 library("VariantAnnotation")
 library("stringr")
 library("dplyr")
+library("tidyr")
 
 ##### Filter variants ######
 
