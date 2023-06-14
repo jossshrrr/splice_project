@@ -11,6 +11,7 @@ This repository is primarily set up for my supervisors to inspect the overall st
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Model Training](#model-training)
 
 ## Description
 
@@ -35,7 +36,7 @@ The pipeline is implemented in [*Nextflow*](https://github.com/nextflow-io/nextf
 nextflow run variant_workflow.nf -c workflow_info.config
 ```
 
-## Parameters
+### Parameters
 
 This workflow uses a configuration file called `workflow_info.config` to set various parameters. Below is a brief explanation of each parameter in the file:
 
@@ -50,7 +51,7 @@ This workflow uses a configuration file called `workflow_info.config` to set var
 | `spliceai_distance`| The distance within which SpliceAI should analyze variants. Optional; if not provided, uses default distance.   | `500`                                               |
 | `pangolin_distance`| The distance within which Pangolin should analyze variants. Optional; if not provided, uses default distance.   | `500`                                               |
 
-## Additional Files Required
+### Additional Files Required
 
 This workflow requires several additional files that are essential for its operation. Below is a list of these files along with a brief description, the file path, and the source where they can be obtained:
 
@@ -67,7 +68,7 @@ This workflow requires several additional files that are essential for its opera
 
 Please ensure that these files are in the correct locations specified above as they are essential for the proper functioning of the workflow.
 
-## vcfanno Annotation
+### vcfanno Annotation
 
 The pipeline utilizes the tool [*vcfanno*](https://github.com/brentp/vcfanno) to annotate variants with information from additional sources. *vcfanno* requires configuration files. All files below are in the directory `'/pipeline_data/vcfanno/'`:
 
@@ -87,11 +88,11 @@ The pipeline also uses *vcfanno* to process splice prediction scores. This requi
 
 Please note *CADD* is already provided as a single PHRED score during annotation, so no additional postprocessing is required for this score. 
 
-# Model Training Information
+## Model Training
 
-Information regarding model training can be found in the [`/model_info`](./model_info) directory.
+Information regarding model training (R script) can be found in the [`/model_info`](./model_info) directory.
 
-## Models
+### Models
 
 The models are loaded as RDS files. This makes it easy to load the trained models in R for later use.
 
